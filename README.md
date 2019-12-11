@@ -1,4 +1,4 @@
-# [Angular Infinite Scrolling app](https://deadlyfingers.github.io/ng-infinite-scrolling/) [![Build Status](https://travis-ci.org/deadlyfingers/ng-infinite-scrolling.svg?branch=master)](https://travis-ci.org/deadlyfingers/ng-infinite-scrolling)
+# [Angular Infinite Scrolling app](https://deadlyfingers.github.io/ng-infinite-scroll/) [![Build Status](https://travis-ci.org/deadlyfingers/ng-infinite-scroll.svg?branch=master)](https://travis-ci.org/deadlyfingers/ng-infinite-scroll)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20 optimised for [Typescript](https://www.typescriptlang.org/) development in [VSCode](https://code.visualstudio.com/). The sample app features an infinite scrolling list fetching paginated data from a publicly available [source](https://anilist.co/graphiql) using a [GraphQL](https://graphql.org/) query.
 
