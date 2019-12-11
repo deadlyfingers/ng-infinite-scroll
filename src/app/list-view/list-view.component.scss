@@ -1,0 +1,12 @@
+.list-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.list-item {
+  height: 100px;
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid #555;
+  box-sizing: border-box;
+}

@@ -1,0 +1,26 @@
+<div *ngIf="!observableData" class="loading">
+  <div class="spinner"></div>
+  <p>Loading</p>
+</div>
+
+<cdk-virtual-scroll-viewport
+  class="list-container anilist"
+  itemSize="100"
+  maxBufferPx="500"
+  (scrolledIndexChange)="scrolledIndexChange($event)"
+>
+  <div
+    *cdkVirtualFor="
+      let item of observableData | async;
+      index as i;
+      odd as isOdd
+    "
+    class="list-item"
+  >
+    <app-list-view-cell
+      [data]="item"
+      [index]="i"
+      [class.odd]="isOdd"
+    ></app-list-view-cell>
+  </div>
+</cdk-virtual-scroll-viewport>

@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+}
+
+.anilist {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* loading spinner */
+
+$SpinnerSize: 20px;
+$SpinnerBorder: rgba(9, 211, 172, 0.5);
+$SpinnerBorderAccent: #09d3ac;
+$SpinnerBorderWidth: 3px;
+
+.loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+}
+
+.loading>p {
+  display: none;
+}
+
+.spinner {
+  display: block;
+  width: $SpinnerSize;
+  height: $SpinnerSize;
+  border: $SpinnerBorderWidth solid $SpinnerBorder;
+  border-left-color: $SpinnerBorderAccent;
+  border-radius: 50%;
+  background: transparent;
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

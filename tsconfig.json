@@ -17,10 +17,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "plugins": [{
+      "name": "@angular/language-service"
+    }]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "exclude": [
+    "**/*/node_modules"
+  ]
 }

@@ -1,0 +1,31 @@
+{
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [
+    150
+  ],
+  "tslint.jsEnable": true,
+  "files.exclude": {
+    "dist/": true,
+    "coverage/": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/*.css": true,
+    "**/*.svg": true,
+    "**/*.gif": true,
+    "**/*.ico": true,
+    "**/*.jpg": true,
+    "**/*.jpeg": true,
+    "**/*.png": true,
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "yarn.lock": true,
+    "package-lock.json": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/coverage": true,
+  },
+}
