@@ -15,7 +15,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist/ng-infinite-scrolling"
   },
   "private": true,
   "dependencies": {
