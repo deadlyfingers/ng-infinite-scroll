@@ -5,8 +5,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ListViewComponent } from './list-view.component';
 import { ListViewCellComponent } from '../list-view-cell/list-view-cell.component';
 
-
-
 describe('ListViewComponent', () => {
   let component: ListViewComponent;
   let fixture: ComponentFixture<ListViewComponent>;

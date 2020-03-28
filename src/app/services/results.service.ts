@@ -1,34 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import pageResultsQuery from './graphql/PageResults.gql';
-import GraphQLBase from './';
+import { PageService } from './page.service';
 import { Observable } from 'rxjs';
+import { Result } from '../types/DataModel';
+import PageResultsGQL from './graphql/PageResults.gql';
+import GraphQLBase from '.';
+import { ENDPOINT } from './results.service.common';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ResultsService extends GraphQLBase {
-  url = 'https://graphql.anilist.co/';
+export class ResultsService extends PageService {
+  protected url = ENDPOINT;
 
-  constructor(
-    private http: HttpClient,
-  ) {
-    super();
-  }
+  private query = GraphQLBase.GetBody(PageResultsGQL);
 
-  getPageResult<Result>(page: number): Observable<Result> {
+  getPageResult(page: number): Observable<Result> {
     if (!page) {
-      throw new Error(`Expected page no > 0 but got ${page}`);
+      throw new Error(`Expected query with page no > 0 but got ${page}`);
     }
-    const variables = {
-      page
-    };
-    const body = GraphQLBase.QueryBody(pageResultsQuery, variables);
-    const headers = {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    };
-
-    return this.http.post<Result>(this.url, body, { headers });
+    return this.postPaginatedQuery<Result>(page, this.query);
   }
 }
