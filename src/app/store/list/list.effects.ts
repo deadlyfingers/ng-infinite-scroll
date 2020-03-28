@@ -28,10 +28,6 @@ export class ListEffects implements OnInitEffects {
         catchError(() => EMPTY) // TODO: handle error () => of(selector)
       )
     )
-    // withLatestFrom(this.items$),
-    // switchMap(([_, items]) => {
-    //   return of(actions.updatedItems({ items }))
-    // })
   );
 
   ngrxOnInitEffects(): Action {
