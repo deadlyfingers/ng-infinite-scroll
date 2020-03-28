@@ -1,4 +1,4 @@
-<div *ngIf="!observableData" class="loading">
+<div *ngIf="!items || items.length === 0" class="loading">
   <div class="spinner"></div>
   <p>Loading</p>
 </div>
@@ -8,13 +8,10 @@
   itemSize="100"
   maxBufferPx="500"
   (scrolledIndexChange)="scrolledIndexChange($event)"
+  autosize
 >
   <div
-    *cdkVirtualFor="
-      let item of observableData | async;
-      index as i;
-      odd as isOdd
-    "
+    *cdkVirtualFor="let item of items; index as i; odd as isOdd"
     class="list-item"
   >
     <app-list-view-cell

@@ -1,0 +1,6 @@
+<app-list-view
+  [items]="items$ | async"
+  [loading]="loading$ | async"
+  (loadMore)="loadNextPage()"
+>
+</app-list-view>

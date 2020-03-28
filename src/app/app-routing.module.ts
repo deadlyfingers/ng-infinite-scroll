@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ListViewComponent } from './list-view/list-view.component';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
-  { path: '', component: ListViewComponent }
+  { path: '', component: ListComponent }
 ];
 
 @NgModule({

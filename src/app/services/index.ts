@@ -3,12 +3,15 @@ import { GraphQLQuery } from './graphql/types';
 import { KeyValues } from '../types';
 
 export default class GraphQLBase {
-  static QueryBody(gqlQuery: DocumentNode, variables: KeyValues): string {
-    if (!gqlQuery.loc) {
-      throw Error('Failed to get GraphQL document');
-    }
-    const query = gqlQuery.loc.source.body;
-    const json = GraphQLBase.Query(query, variables);
+  static Query(query: string, variables: KeyValues): GraphQLQuery {
+    return {
+      query,
+      variables,
+    };
+  }
+
+  static QueryBody(gqlQuery: string, variables: KeyValues): string {
+    const json = GraphQLBase.Query(gqlQuery, variables);
     // strips out whitespace for POST body request
     return JSON.stringify(json)
       .replace(/\\n/g, '')
@@ -16,10 +19,10 @@ export default class GraphQLBase {
       .replace(/\s\s+/g, ' ');
   }
 
-  static Query(query: string, variables: KeyValues): GraphQLQuery {
-    return {
-      query,
-      variables,
-    };
+  static GetBody(gqlQuery: DocumentNode): string {
+    if (!gqlQuery.loc || !gqlQuery.loc.source || !gqlQuery.loc.source.body || gqlQuery.loc.source.body.length === 0) {
+      throw Error('Failed to import GraphQL document body');
+    }
+    return gqlQuery.loc.source.body;
   }
 }

@@ -4,6 +4,8 @@
   "editor.rulers": [
     150
   ],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "tslint.jsEnable": true,
   "files.exclude": {
     "dist/": true,
