@@ -23,6 +23,7 @@ describe('ListViewCellComponent', () => {
         english: 'hello',
         native: 'world',
       },
+      description: 'test',
       coverImage: {
         color: '#00ff00',
         medium: 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs='

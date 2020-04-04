@@ -1,12 +1,10 @@
-<img
-  class="thumb"
-  [src]="data.coverImage.medium"
+<img class="thumb" [src]="data.coverImage.medium"
   [alt]="data.title.english || data.title.userPreferred || data.title.native"
-  [ngStyle]="{ backgroundColor: data.coverImage.color }"
-/>
+  [ngStyle]="{ backgroundColor: data.coverImage.color }" />
 <div class="content">
   <h4 class="title" [title]="data.id">
     {{ data.title.english || data.title.userPreferred || data.title.native }}
   </h4>
+  <p class="description">{{ data.description }}</p>
 </div>
 <code>{{ index }}</code>

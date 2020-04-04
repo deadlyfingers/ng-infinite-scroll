@@ -41,6 +41,18 @@
   -webkit-line-clamp: 3;
 }
 
+.content>.description {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #777;
+}
+
 code {
   position: absolute;
   top: 0;

@@ -22,6 +22,7 @@ export interface PageInfo {
 export interface Media {
   id: number;
   title: Title;
+  description: string;
   coverImage: CoverImage;
 }
 

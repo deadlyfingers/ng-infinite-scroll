@@ -1,7 +1,16 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "indent": [true, "spaces", 2],
+    "linebreak-style": [true, "LF"],
+    "eofline": true,
+    "no-trailing-whitespace": true,
+    "no-irregular-whitespace": true,
+    "no-unnecessary-initializer": true,
+    "import-spacing": true,
+    "class-name": true,
     "array-type": false,
+    "arrow-return-shorthand": true,
     "arrow-parens": false,
     "deprecation": {
       "severity": "warning"
@@ -39,7 +48,7 @@
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [true, "single"],
-    "trailing-comma": false,
+    "trailing-comma": [true, { "multiline": "ignore", "singleline": "ignore" }],
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,

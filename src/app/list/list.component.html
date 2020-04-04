@@ -2,5 +2,6 @@
   [items]="items$ | async"
   [loading]="loading$ | async"
   (loadMore)="loadNextPage()"
+  [loadMoreBuffer]="10"
 >
 </app-list-view>

@@ -1,23 +1,13 @@
+<ng-container *ngIf="resizeHandler$ | async"></ng-container>
+
 <div *ngIf="!items || items.length === 0" class="loading">
   <div class="spinner"></div>
   <p>Loading</p>
 </div>
 
-<cdk-virtual-scroll-viewport
-  class="list-container anilist"
-  itemSize="100"
-  maxBufferPx="500"
-  (scrolledIndexChange)="scrolledIndexChange($event)"
-  autosize
->
-  <div
-    *cdkVirtualFor="let item of items; index as i; odd as isOdd"
-    class="list-item"
-  >
-    <app-list-view-cell
-      [data]="item"
-      [index]="i"
-      [class.odd]="isOdd"
-    ></app-list-view-cell>
+<cdk-virtual-scroll-viewport class="list-container anilist" itemSize="100" maxBufferPx="500"
+  (scrolledIndexChange)="scrolledIndexChange($event)">
+  <div *cdkVirtualFor="let item of items; index as i; odd as isOdd" class="list-item">
+    <app-list-view-cell [data]="item" [index]="i" [class.odd]="isOdd"></app-list-view-cell>
   </div>
 </cdk-virtual-scroll-viewport>

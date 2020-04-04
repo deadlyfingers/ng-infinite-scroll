@@ -1,9 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.detectIndentation": false,
-  "editor.rulers": [
-    150
-  ],
+  "editor.rulers": [140],
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "tslint.jsEnable": true,
@@ -20,7 +18,7 @@
     "**/*.ico": true,
     "**/*.jpg": true,
     "**/*.jpeg": true,
-    "**/*.png": true,
+    "**/*.png": true
   },
   "search.exclude": {
     "**/node_modules": true,
@@ -28,6 +26,6 @@
     "package-lock.json": true,
     "**/.git": true,
     "**/dist": true,
-    "**/coverage": true,
-  },
+    "**/coverage": true
+  }
 }
