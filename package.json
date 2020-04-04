@@ -7,7 +7,7 @@
     "start": "ng serve --aot --configuration es5",
     "dev": "run-p -r -n start dev:browsersync",
     "dev:browsersync": "npx browser-sync start --no-open --ws -p http://localhost:4200/",
-    "build": "ng build",
+    "build": "ng build --aot",
     "build:prod": "ng build --prod",
     "build:deploy": "ng build --prod --base-href https://deadlyfingers.github.io/ng-infinite-scroll/",
     "test": "ng test",
