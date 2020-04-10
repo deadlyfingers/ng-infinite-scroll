@@ -14,7 +14,7 @@ export interface StateList {
   loading: boolean;
 }
 
-const initialStateList: StateList = {
+export const initialState: StateList = {
   items: [],
   page: 0,
   loading: false,
@@ -24,7 +24,7 @@ const initialStateList: StateList = {
 export interface State extends StateList { }
 
 const listReducer = createReducer(
-  initialStateList,
+  initialState,
   on(actions.loadNextPage, state => {
     const nextPage = state.page + 1;
     return {

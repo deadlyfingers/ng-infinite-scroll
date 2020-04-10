@@ -15,10 +15,10 @@ export class ResultsService extends PageService {
 
   private query = GraphQLBase.GetBody(PageResultsGQL);
 
-  getPageResult(page: number): Observable<Result> {
+  getPageResult$(page: number): Observable<Result> {
     if (!page) {
       throw new Error(`Expected query with page no > 0 but got ${page}`);
     }
-    return this.postPaginatedQuery<Result>(page, this.query);
+    return this.postPaginatedQuery$<Result>(page, this.query);
   }
 }

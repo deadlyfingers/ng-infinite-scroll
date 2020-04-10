@@ -15,7 +15,7 @@ export abstract class PageService extends GraphQLBase {
     super();
   }
 
-  protected postPaginatedQuery<T>(page: number, query: string): Observable<T> {
+  protected postPaginatedQuery$<T>(page: number, query: string): Observable<T> {
     const variables = {
       page
     };
